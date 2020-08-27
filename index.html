@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>3-1 Online Class</title>
+	     <link rel="stylesheet" href="//assets/css/jeokjul.css">
+    <style>
+      @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}
+        body {
+          font-family: "Noto Sans KR", sans-serif !important;
+        }
+
+        h1 {
+          font-size: 60px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      body {background:#1C1C1C;}
+    </style>
+  </head>
+  <body>
+    <center>
+        <h1 style="background:#1C1C1C; color:white">
+      ✏️ 3 - 1 Online Class
+    </h1>
+    </center>
+  </body>
+ <script type="text/javascript">
+    function showClock()
+    {
+        var currentDate=new Date();
+        var divClock=document.getElementById("divClock");
+        var apm=currentDate.getHours();
+        if(apm<12)
+        {
+            apm="오전 ";
+        }
+        else
+        {
+            apm="오후 ";
+        }
+        
+        var msg = "현재시간 : "+apm +(currentDate.getHours()-12)+"시 ";
+        msg += currentDate.getMinutes() + "분 ";
+        msg += currentDate.getSeconds() + "초";
+        
+        divClock.innerText=msg;
+        
+        setTimeout(showClock,1000);
+    }
+</script>
+</head>
+<center>
+<body onload="showClock()">
+    <div id="divClock" class="clock" style="color:white; background:#1C1C1C"></div>
+	<a href="https://eduro.goe.go.kr/hcheck/index.jsp" class="btn btn-primary" style="text-align: center">자가진단 참여</a>
+</body>
+</center>
+</html>
